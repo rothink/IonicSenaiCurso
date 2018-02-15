@@ -1,0 +1,21 @@
+<ion-view view-title="Editando minha nota">
+    <ion-content>
+        <div class="list card">
+            <label for="" class="item item-input">
+                <span class="input-label">Titulo</span>
+                <input type="text" placeholder="titulo" ng-model="nota.titulo">
+            </label>
+            <label for="" class="item item-input">
+                <span class="input-label">Descrião</span>
+                <textarea placeholder="descricao" rows="5" ng-model="nota.descricao"></textarea>
+            </label>
+        </div>
+        <div class="padding">
+            <button class="button button-block button-balanced"  
+            ng-disabled="nota.titulo === '' || nota.descricao == ''"
+            ng-click="salvar()">
+                Salvar
+            </button>
+        </div>
+    </ion-content>
+</ion-view>

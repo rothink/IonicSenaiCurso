@@ -1,0 +1,15 @@
+<ion-view view-title="Minhas notas">
+    <ion-content ng-controller="ListaCtrl">
+        <ion-list>
+            <ion-item href="#/editar/{{nota.id}}" ng-repeat="nota in notas">
+                <h2>{{nota.titulo}}</h2>
+                <p>{{nota.descricao}}</p>
+                <ion-option-button class="button-assertive" ng-click="remover(nota.id)">
+                    Deletar
+                </ion-option-button>
+            </ion-item>
+        </ion-list>
+        <a href="#/adicionar" class="button button-block button-calm">Adicionar</a>
+    </ion-content>
+    
+</ion-view>
